@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+Properties configer = new Properties()
+configer.load(new FileInputStream(file("../config.properties")))
+
+android {
+    compileSdkVersion Integer.valueOf(configer['compileSdkVersion'])
+    buildToolsVersion configer['buildToolsVersion']
+
+    defaultConfig {
+        minSdkVersion Integer.valueOf(configer['minSdkVersion'])
+        targetSdkVersion Integer.valueOf(configer['targetSdkVersion'])
+        versionCode Integer.valueOf(configer['versionCode'])
+        versionName configer['versionName']
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs = ['src/main/java']
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile configer['lib_appcompat']
+}

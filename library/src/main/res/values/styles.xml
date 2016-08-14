@@ -1,0 +1,48 @@
+<resources>
+
+
+    <!--  本来是用的windowIsTranslusent为true设置背景透明，但却导致不支持横竖屏切换了！所以换成了windowBackground
+    windowAnimationStyle设置成这个值，是因为如果不这样，在android:windowIsTranslucent为true时，就不支持自定义activity切换动画了！
+    参考：http://blog.csdn.net/a1031359915/article/details/40184891
+
+    -->
+    <style name="AyoTransparentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Activity.Translucent.Style</item>
+
+
+    </style>
+
+
+
+    <style name="AyoAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- <item name="android:windowAnimationStyle">@style/Animation.Activity.Style</item> -->
+        <item name="android:windowAnimationStyle">@style/Animation.Activity.Translucent.Style</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+   <!-- <style name="Animation.Activity.Style" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:activityCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:activityCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskToFrontExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskToBackEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskToBackExitAnimation">@anim/base_slide_right_out</item>
+    </style>-->
+
+    <style name="Animation.Activity.Translucent.Style" parent="@android:style/Animation.Translucent">
+       <!--<item name="android:windowEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:windowExitAnimation">@anim/base_slide_right_out</item>-->
+    </style>
+
+</resources>

@@ -3,6 +3,11 @@ A light tool sdk include: Activity without 声明 in manifest，SystemBar一体�
 
 
 ###
+###
+
+demo apk
+![](./doc/mm1.png)
+
 
 ## 1 这是什么？
 
@@ -170,7 +175,7 @@ protected void onCreate(Bundle savedInstanceState) {
 fitSystemWindows是true时：enableSystemBarTakenByContent(false)，内容给SystemBar留空
 ![](./doc/mm2.png)
 
-fitSystemWindows是false时：enableSystemBarTakenByContent(true)，内容给SystemBar留空
+fitSystemWindows是false时：enableSystemBarTakenByContent(true)，内容侵入SystemBar
 ![](./doc/mm3.png)
 
 
@@ -185,6 +190,7 @@ http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0317/2613.html
 
 好像和滚动有关，可以上下滚动时，内容是否可以滚动到标题栏里
 
+```
 <ListView
     android:layout_gravity="center_vertical"
     android:id="@+id/list"
@@ -192,7 +198,7 @@ http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0317/2613.html
     android:clipToPadding="false"
     android:paddingTop="50dip"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent" />
+```
 
 ListView初始化之后，由于top的50dp的padding，看似顶着标题栏，但往上滚动时，内容就会跑到padding的50dp里，也就能从标题栏看到了（如果标题栏带透明）

@@ -5,7 +5,8 @@ A light tool sdk include: Activity without 声明 in manifest，SystemBar一体�
 ###
 ###
 
-demo apk
+demo apk  
+
 ![](./doc/mm1.png)
 
 
@@ -147,7 +148,8 @@ public static void start(Context c, boolean takeSystemBar, int lanuchMode, OnRes
 ## 3 状态栏一体化问题
 
 
-问题1：颜色设置，可以开启和关闭，分status bar和navigation bar
+问题1：颜色设置，可以开启和关闭，分status bar和navigation bar  
+
 问题2：是否侵入，可以开启和关闭，和颜色设置不冲突
 
 代码：

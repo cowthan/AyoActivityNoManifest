@@ -26,6 +26,10 @@ demo apk
 
 ### (1) manifest
 
+
+在gradle里引入：`compile 'org.ayo:attacher:1.0.0'`
+
+
 * manifest里只需要声明：
     * 主Activity
     * 有特殊需求的Activity，如支持旋转

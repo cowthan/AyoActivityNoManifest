@@ -2,12 +2,15 @@
 A light tool sdk include: Activity without 声明 in manifest，SystemBar一体化，Activity和Frament状态存储
 
 
-###
-###
+-----------------------------
 
 demo apk  
 
 ![](./doc/mm1.png)
+
+
+-----------------------------
+
 
 
 ## 1 这是什么？  
@@ -27,7 +30,7 @@ demo apk
 ### (1) manifest
 
 
-在gradle里引入：`compile 'org.ayo:attacher:1.0.0'`
+在gradle里引入：`compile 'org.ayo:ayo-attacher:1.0.0'`
 
 
 * manifest里只需要声明：

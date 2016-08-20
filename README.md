@@ -57,28 +57,28 @@ __Manifest中的声明：__
         </activity>
 
         <activity
-            android:name="org.ayo.app.base.TmplActivityStandard"
+            android:name="org.ayo.attacher.TmplActivityStandard"
             android:configChanges="orientation|screenSize|keyboardHidden|navigation"
             android:screenOrientation="portrait"
             android:launchMode="standard"
             android:theme="@style/AyoTransparentTheme" />
 
         <activity
-            android:name="org.ayo.app.base.TmplActivitySingleTask"
+            android:name="org.ayo.attacher.TmplActivitySingleTask"
             android:configChanges="orientation|screenSize|keyboardHidden|navigation"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/AyoTransparentTheme" />
 
         <activity
-            android:name="org.ayo.app.base.TmplActivitySingleTop"
+            android:name="org.ayo.attacher.TmplActivitySingleTop"
             android:configChanges="orientation|screenSize|keyboardHidden|navigation"
             android:screenOrientation="portrait"
             android:launchMode="singleTop"
             android:theme="@style/AyoTransparentTheme" />
 
         <activity
-            android:name="org.ayo.app.base.TmplActivitySingleInstance"
+            android:name="org.ayo.attacher.TmplActivitySingleInstance"
             android:configChanges="orientation|screenSize|keyboardHidden|navigation"
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
